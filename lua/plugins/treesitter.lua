@@ -7,7 +7,7 @@ return {
           ensure_installed = { "lua", "javascript", "html" },
           sync_install = true,
           highlight = { enable = true },
-          indent = { enable = true },  
+          indent = { enable = true },
         })
     end
 }

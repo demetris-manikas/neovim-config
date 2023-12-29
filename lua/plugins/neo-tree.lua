@@ -7,7 +7,15 @@ return {
         "MunifTanjim/nui.nvim",
     },
     config = function ()
-        vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
-        vim.keymap.set('n', '<leader>nt', ':Neotree toggle <CR>', {})
+        vim.keymap.set('n', '<leader> ', ':Neotree toggle <CR>', {})
+        vim.keymap.set('n', '<leader>gs', ':Neotree float git_status <CR>', {})
+        vim.keymap.set('n', '<C-o>', ':Neotree float buffers <CR>', {})
+        require("neo-tree").setup({
+            window = {
+                mappings = {
+                    ["P"] = { "toggle_preview", config = { use_float = false, use_image_nvim = true } },
+                }
+            }
+        })
     end
 }

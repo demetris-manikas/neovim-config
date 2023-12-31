@@ -10,9 +10,11 @@ return {
         vim.keymap.set('n', '<leader>b', ':Neotree toggle <CR>', {})
         vim.keymap.set('n', '<C-o>', ':Neotree float buffers <CR>', {})
         require("neo-tree").setup({
+            open_files_do_not_replace_types = { "terminal", "Trouble", "trouble", "qf", "Outline" },
             window = {
                 mappings = {
                     ["P"] = { "toggle_preview", config = { use_float = false, use_image_nvim = true } },
+                    ["<space>"] = "none"
                 }
             },
             source_selector = {

@@ -1,5 +1,3 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
@@ -15,4 +13,4 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("vim-options")
 require("lazy").setup("plugins")
-
+require("lazy").setup("plugins/git")
